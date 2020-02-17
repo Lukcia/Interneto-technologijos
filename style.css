@@ -6,76 +6,42 @@ html, body {
     margin: 0;
   }
 
-h1 {
-    position: static;
-    max-width: 100%;
-    height: auto;
-  }
 
-  h2
-  {
-  position: absolute;
-  top: 46px;
-  right: 800px;
-  height:  auto;
-  word-spacing: 2em;
-   
-  }
-  h3
-  {
-   position: absolute;
-   top: 28px;
-   right: 250px;
-   height:  auto;
-  }
 
-  h4
+  .whiteTextBig
   {
     font-family: 'Raleway', sans-serif;
     color: #fff;
-    position: absolute;
     font-size: 5.5em;
     line-height: 1em;
-    top: 100px;
-    right: 1000px;
-    height:  auto;
-    font-stretch: expanded;
+    padding: 50px 1000px;
 
 
   }
 
-  p {
-    position: absolute;
-    font-family:'Open Sans';
-    color: #fff;
-	font-size: 2em;
-	line-height: 1.1em;
-    top: 450px;
-    right: 860px;
-    
-}
+.whiteText {
+   
+  font-family:'Open Sans';
+  color: #fff;
+	font-size: 1.5em;
+  line-height: 1.3em;
+  }
 
-footer
-{
-    position: absolute;
-    top: 800px;
-    right: 1550px;
-}
+
  
-section
-{
-    position: absolute;
-    top: 650px;
-    right: 1300px;
-}
 
 .myButton {
     font-family: 'Raleway', sans-serif;
-	color: white;
+   	color: white;
     text-decoration: none;
+    font-size: 1.05em;
+    float: left;
+    text-align: center;
+  padding: 45px 20px;
 }
 .myButton:hover, .myButton:active {
-	text-decoration: underline;
+  text-decoration: underline;
+  color: white;
 }
 
 .redButton 
@@ -84,20 +50,20 @@ section
   background-color: #f44336;
   border: none;
   color: white;
-  padding: 15px 32px;
+  padding: 25px 20px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 35px;
-  margin: 4px 2px;
+  font-size: 20px;
+  margin: 120px 2px;
   cursor: pointer;
+  border-radius: 10px;
 
 }
 .redButton:hover, .redButton:active {
     background-color: red;
   }
 
-  
 
 
   .whiteButton 
@@ -106,16 +72,17 @@ section
   background-color: transparent;
   border: none;
   color: white;
-  padding: 15px 32px;
+  padding: 40px 32px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 20px;
+  font-size: 18px;
   margin: 4px 2px;
   cursor: pointer;
 
 }
 .whiteButton:hover, .whiteButton:active {
+    border-radius: 10px;
     background-color: white;
     color: black;
   }
