@@ -2,43 +2,104 @@
 <html>
     <head>
         <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="script.js"></script>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
     </head> 
-    <style>
-        body {
-          background-image: url('front_page_PNG.png');
-          background-repeat: no-repeat;
-          background-attachment: fixed;  
-          background-size: cover;
-        }
-    </style>
-        <body>
-        
-
+        <body class="imageMain">
             <header>
             <div class="row">
-                <div class="col-md-3">
+                <div class="col-md-4">
+                <a href="#" onclick="Vizzy()">
                 <img src = "VIZZY_logo.png">
+                </a>
                 </div>
            
-                <div class="col col-lg-5 ">
-                <a href="#"class="myButton" selected>HOME</a>
-			    <a href="#"class="myButton">PRODUCTS</a>
-			    <a href="#"class="myButton">TEMPLATES</a>
-                <a href="#"class="myButton">PRICING</a>
+                <div class="col col-lg-4 ">
+                <a href="#"class="myButton" onclick="Home()" selected>HOME</a>
+			    <a href="#"class="myButton" onclick="Products()">PRODUCTS</a>
+			    <a href="#"class="myButton" onclick="Templates()">TEMPLATES</a>
+                <a href="#"class="myButton" onclick="Pricing()">PRICING</a>
                 </div>
            
                 <div class="col-md-4">
-                <button class="whiteButton" >SIGN IN</button>           
-                <button reversed class="whiteButton">SIGN UP</button>
+
+                    <!--------------SIIIGN IN---------------->
+                <button type="button"  data-toggle="modal" data-target="#popUpWindow1" class="whiteButton">SIGN IN</button> 
+
+                <div class="modal fade" id="popUpWindow1">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+
+                            <!----header---->
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+
+                            <!----body(form)---->
+                            <div class="modal-body">
+                                <form role="form">
+                                    <div class="form-group">
+                                        <input type="email" class="form-control" placeholder="Email"> 
+                                    </div>
+
+                                    <div class="form-group">
+                                        <input type="password" class="form-control" placeholder="Password"> 
+                                    </div>
+                                </form>
+                            </div>
+
+                            <!----button---->
+                            <div class="modal-footer">
+                                <button class="btn btn-primary-block">Log in</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--------------SIIIGN UP---------------->
+
+                <button type="button"  data-toggle="modal" data-target="#popUpWindow2" class="whiteButton">SIGN UP</button> 
+
+                <div class="modal fade" id="popUpWindow2">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+
+                            <!----header---->
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+
+                            <!----body(form)---->
+                            <div class="modal-body">
+                                <form role="form">
+                                    <div class="form-group">
+                                        <input type="email" class="form-control" placeholder="Email"> 
+                                    </div>
+
+                                    <div class="form-group">
+                                        <input type="password" class="form-control" placeholder="Password"> 
+                                    </div>
+
+                                    <div class="form-group">
+                                        <input type="password" class="form-control" placeholder="Confirm Password"> 
+                                    </div>
+                                </form>
+                            </div>
+
+                            <!----button---->
+                            <div class="modal-footer">
+                                <button class="btn btn-primary-block">Register</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 </div>
             </div>
-            </header>
-            
+            </header>          
             <article>
-                <h1 class="whiteTextBig col-md-8 offset-md-1"><b>Create Stunning</b> <br> <b>Visual Media</b></h1>
-                <p class="whiteText col-md-8 offset-md-1">
+                <h1 id="Maintext" class="whiteTextBig col-md-8 offset-md-1"><b>Create Stunning</b> <br> <b>Visual Media</b></h1>
+                <p id="paragraph" class="whiteText col-md-8 offset-md-1">
                     Super simple tool to create trendy videos and pictures <br> for your ads, social media, blogs and website.<br />
 				    Make your project stand out!
                 </p>
@@ -48,16 +109,14 @@
                 </section>
 
                 <footer class="col-md-8 offset-md-1">
-			    <input type="radio" name="select" checked />
-			    <input type="radio" name="select" />
-			    <input type="radio" name="select" />
-			    <input type="radio" name="select" />
+			    <input type="radio" name="select" onclick="ImageSwitch1()"  checked />
+			    <input type="radio" name="select" onclick="ImageSwitch2()" />
+			    <input type="radio" name="select" onclick="ImageSwitch3()" />
+			    <input type="radio" name="select" onclick="ImageSwitch4()" />
                 </footer>
-
             </article>
-
-
-
-        
+            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
         </body>
-        </html>
+</html
